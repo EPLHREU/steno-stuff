@@ -1,5 +1,4 @@
 symbols = "#STKPWHRAO*EUFRPBLGTSDZ"
-
 count = 1
 binary = '{:023b}'.format(count) 
 until = 2**23-1
@@ -16,7 +15,7 @@ while count != until:
     ret = []
     for x in range(0, 23):
         if number and x == 0:
-            next
+            continue
         else:
             if lst[x] == 1:
                 if number:
@@ -32,4 +31,10 @@ while count != until:
         ret[10] = "-"
     if hashNeeded:
         ret = ["#"] + ret
-    print("".join(ret))
+    stroke = "".join(ret)
+    print(stroke)
+    #try:
+    #    result = lookup((stroke,))
+    #except KeyError:
+    #    continue
+    #print('"' + stroke + '": "' + result + '",')
