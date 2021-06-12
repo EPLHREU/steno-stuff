@@ -22,3 +22,12 @@ Generate all possible chords from a single stroke and print them. Useful for pip
 ## `powerset.sh`
 Generate all combinations of specified keys, doesn't create valid steno strokes, so more useful for finding endings or starters to strokes. 
 The current version shows an example of how I would use it to count all the possible endings within a given steno dictionary to find useful clash-free combinations. 
+
+## `p2.erl`
+A phrase analysis tool written in Erlang.
+Given a text dataset as input, as well as a limit of how many words maximally exist in a phrase, and finally a list of threads to run with (should be the same as the previous number), this script will locate all possible words and phrases in this text and organise them by some metric. 
+This metric tends to be a function of the number of occurances and how many words exist in that phrase. Thus words or phrases that appear multiple times will be ranked higher, and are thus more suitable to be added into a steno dictionary. 
+This code as it currently stands does not handle multi Gigabyte text corpuses very well, as the text corpus will be stroked multiple times over in small segments to track phrase occurance. 
+I've easily ran out of 128Gb of RAM with this script, so it's best kept to small relevant datasets (or being improved/re-written).
+"p2.erl" stands for __p__hrase analyser version __2__.
+
