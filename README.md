@@ -31,3 +31,10 @@ This code as it currently stands does not handle multi Gigabyte text corpuses ve
 I've easily ran out of 128Gb of RAM with this script, so it's best kept to small relevant datasets (or being improved/re-written).
 "p2.erl" stands for __p__hrase analyser version __2__.
 
+## `practise.sh`
+A script to extract card entries from my steno Anki desk and put them into a command-line typing tool. Whilst doing this it:
+- extracts the second field containing the text that it matched against 
+- shuffles the lines into a random order
+- limits the selection to 100 entries to make sure it isn't too long
+- removes all new lines, replacing them with spaces joining all the lines into 1 (can be improved)
+- uses this text as input for `speedpad` to display and write against for practise
